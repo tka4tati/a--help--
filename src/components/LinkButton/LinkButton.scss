@@ -1,0 +1,31 @@
+@import "../../assets/fonts/fonts.scss";
+@import "../../assets/colors/colors.scss";
+@import "../../assets/commons/mixins.scss";
+
+
+.container {
+    @include flex(none, end);
+    :hover {
+        color: $main--text--color;
+        background-color: rgba(31, 30, 27, 0.1);;
+    }
+}
+.button {
+    &__container {
+        border: 1px solid $main--text--color;
+        border-radius: 30px;
+        padding: 15px 20px;
+        @include font(500, 16px);
+        line-height: 120%;
+        color: $main--text--color;
+        @include flex(center, center);
+        text-decoration: none;
+        margin: 100px 0;
+        
+    }
+    &__img {
+        width: 67px;
+        height: 25px;
+        margin-left: 15px;
+    }
+}

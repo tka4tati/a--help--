@@ -1,0 +1,27 @@
+@import "../../assets/fonts/fonts.scss";
+@import "../../assets/colors/colors.scss";
+@import "../../assets/commons/mixins.scss";
+
+.infographics {
+    &__container {
+        max-width: 1440px;
+        width: 100%;
+        margin-top: 130px;
+    }
+    &__box {
+        @include flex(center, center);
+        flex-direction: column;
+
+        &-title {
+            @include font(500, 40px);
+            color: $main--text--color;
+            line-height: 120%;
+            margin-bottom: 72px;
+        }
+        &-img {
+            width: 1240px;
+            height: 633.02px;
+        }
+    }
+    
+}

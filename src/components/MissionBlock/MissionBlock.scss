@@ -1,0 +1,87 @@
+@import "../../assets/fonts/fonts.scss";
+@import "../../assets/colors/colors.scss";
+@import "../../assets/commons/mixins.scss";
+
+.mission {
+    &__container {
+        max-width: 1440px;
+        width: 100%;
+        margin-top: 50px;
+        @include flex(center, center);
+        flex-direction: column;
+    }
+    &__title {
+        @include font(500, 40px);
+        color: $main--text--color;
+        line-height: 120%;
+        width: 494px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    &__description {
+        @include font(400, 16px);
+        text-align: center;
+        color: $main--text--color;
+        line-height: 130%;
+        width: 494px;
+        margin-bottom: 40px;
+    }
+}
+.direction {
+    &__container {
+        max-width: 1440px;
+        width: 100%;
+        @include flex(center, center);
+        flex-direction: column;
+    }
+    &__title {
+        @include font(500, 40px);
+        color: $main--text--color;
+        line-height: 120%;
+        width: 600px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    &__description {
+        @include font(400, 16px);
+        text-align: center;
+        color: $main--text--color;
+        line-height: 130%;
+        width: 600px;
+        margin-bottom: 40px;
+    }
+    &__boxes {
+        @include flex(center, space-between);
+        max-width: 1440px;
+        width: 100%;
+        margin-bottom: 100px;
+    }
+    &__box {
+        width: 33.3%;
+        @include flex(center, center);
+        flex-direction: column;
+        
+        &-img {
+            width: 392px;
+            height: 204px;
+        }
+        &-title {
+            @include font(600, 20px);
+            line-height: 120%;
+            color: $main--text--color;
+            width: 392px;
+            height: 48px;
+            margin: 20px 0 12px;
+            text-align: center;
+            @include flex(center, center);
+        }
+        &-description {
+            @include font(400, 16px);
+            line-height: 120%;
+            color: $main--text--color;
+            width: 392px;
+            height: 84px;
+            text-align: center;
+        }
+    }
+}

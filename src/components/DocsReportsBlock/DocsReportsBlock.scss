@@ -1,0 +1,113 @@
+@import "../../assets/fonts/fonts.scss";
+@import "../../assets/colors/colors.scss";
+@import "../../assets/commons/mixins.scss";
+
+.documentation {
+    &__container {
+        max-width: 1440px;
+        width: 100%;
+        margin-top: 50px;
+    }
+    &__title {
+        @include font(500, 40px);
+        color: $main--text--color;
+        line-height: 120%;
+        width: 100%;
+        margin-bottom: 90px;
+        text-align: center;
+    }
+}
+
+.box {
+    &__containers {
+        @include flex(center, center);
+        flex-direction: column;
+        width: 100%;
+    }
+    &__content {
+        @include flex(center, space-between);
+        width: 630px;
+        margin-bottom: 30px;
+        &-square {
+            @include flex(center, space-between);
+            flex-direction: column;
+            height: 438px;
+        }
+        &-item {
+            width: 630px;
+            border: 1px solid black;
+            padding: 20px 20px;
+            text-align: center;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            @include font(500, 15px);
+            line-height: 120%;
+            color: $main--text--color;
+            cursor: pointer;
+            &:hover {
+                background-color: $hovered--input--color;
+            }
+        }
+        &-title {
+            @include font(700, 20px);
+            @include flex(center, start);
+            margin-bottom: 15px;
+            color: $main--text--color;
+        }
+        &-description {
+            @include font(400, 16px);
+            margin-bottom: 15px;
+            text-align: start;
+            color: $main--text--color;
+        }
+        &-date {
+            @include font(500, 16px);
+            text-align: start;
+            color: $main--text--color;
+        }
+    }
+    &__item {
+        width: 300px;
+        border: 1px solid black;
+        padding: 20px 50px;
+        text-align: center;
+        border-radius: 20px;
+        @include font(500, 15px);
+        line-height: 120%;
+        color: $main--text--color;
+        cursor: pointer;
+        &:hover {
+            background-color: $hovered--input--color;
+        }
+        &-square {
+            width: 250px;
+            border: 1px solid black;
+            padding: 80px 30px;
+            text-align: center;
+            border-radius: 20px; 
+            @include font(500, 15px);
+            line-height: 120%;
+            color: $main--text--color;
+            cursor: pointer;
+            &:hover {
+                background-color: $hovered--input--color;
+            }
+        }
+    }
+    &__button {
+        @include flex(center, end);
+        width: 55%;
+        margin-top: 50px;
+        margin-bottom: 137px;
+        &-wrapper {
+            width: 370px;
+            margin-left: 50px;
+        }
+        &-text {
+            width: 238px;
+            height: 38px;
+            @include font(500, 16px);
+            color: $secondary--text--color;
+        }
+    }
+}

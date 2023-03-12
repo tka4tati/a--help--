@@ -1,0 +1,45 @@
+@import "../../assets/colors/colors.scss";
+@import "../../assets/commons/mixins.scss";
+@import "../../assets/fonts/fonts.scss";
+
+.partners {
+    &__container {
+        max-width: 1440;
+        width: 100%;
+        @include flex(center, center);
+        flex-direction: column;
+    }
+    &__title {
+        @include font(500, 40px);
+        line-height: 120%;
+        color: $main--text--color;
+        margin-bottom: 60px;
+    }
+    &__boxes {
+        max-width: 1440;
+        width: 100%;
+        @include flex(center, space-around);
+        margin-bottom: 150px;
+    }
+    &__box {
+        @include flex(center, start);
+        flex-direction: column;
+        width: 120px;
+    }
+    &__text {
+        text-align: center;
+        margin-top: 10px;
+        height: 64px;
+        &-title {
+            color: $main--text--color;
+            @include font(500, 16px);
+            line-height: 120%;
+            margin: 0 0 4px;
+        }
+        &-description {
+            color: #666666;
+            @include font(400, 12px);
+            line-height: 130%;
+        }
+    }
+}

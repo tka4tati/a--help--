@@ -1,0 +1,75 @@
+@import "../../../assets/fonts/fonts.scss";
+@import "../../../assets/colors/colors.scss";
+@import "../../../assets/commons/mixins.scss";
+
+.carouselStyle {
+  width: 560px;
+  height: 620px;
+
+}
+
+.ShortInfoBlockCarousel {
+  @include flex (center, center);
+  flex-direction: column;
+  margin-bottom: -150px;
+}
+
+.carousel-item {
+  background-size: cover;
+  width: x;
+  height: y;
+}
+
+.carousel-item img{
+  max-width:100%;
+  height:auto;
+  margin-bottom: 29px;
+}
+
+.carousel-item-path img {
+  width: 8px;
+  height: 15px;  
+}
+
+.carousel-item-path {
+  cursor: pointer;
+}
+
+.ShortInfoBlockCarousel .slider{
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      &-indicators{
+          display: flex;
+          width: 100%;
+          justify-content: center;
+          order: 1;
+          button {
+              position: relative;
+              padding: 0;
+              margin: 0 9px;
+              width: 10px;
+              height: 10px;
+              border: 1px solid black;
+              border-radius: 9999px;
+              background-color: transparent;
+              top: -68px;
+          }
+          button.active{
+              background-color: black;
+          }
+      }
+      &-control-prev{
+          position: absolute;
+          left: 25px;
+          bottom: 50px;
+          rotate: 180deg;
+          scale: 5
+      }
+      &-control-next{
+          position: absolute;
+          right: 25px;
+          bottom: 75px;
+          scale: 5
+      }
+  }

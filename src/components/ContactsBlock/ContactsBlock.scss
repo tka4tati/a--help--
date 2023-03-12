@@ -1,0 +1,59 @@
+@import "../../assets/fonts/fonts.scss";
+@import "../../assets/colors/colors.scss";
+@import "../../assets/commons/mixins.scss";
+
+.contacts {
+    &__container {
+        width: 100%;
+        max-width: 1440px;
+        @include flex(center, center);
+        flex-direction: column;
+        margin: 50px 0 72px;
+    }
+    &__title {
+        @include font(500, 40px);
+        color: $main--text--color;
+        line-height: 120%;
+        margin-bottom: 72px;
+
+    } 
+    &__wrapper {
+        @include flex(center, space-evenly);
+        width: 100%;
+    }
+    &__block {
+        @include flex(start, space-between);
+        flex-direction: column;
+        height: 536px;
+        &-contact {
+            margin-left: 10px;
+            h5 {
+                
+                @include font(500, 14px);
+                color: $main--text--color;
+                line-height: 130%;
+                height: 18px;
+                margin-bottom: 4px;
+                margin-top: 20px;
+            }
+            p {
+                @include font(400, 14px);
+                color: #4D4D4D;
+                line-height: 130%;
+                height: 18px;
+            }
+        }
+        &-icons {
+            @include flex(center, space-between);
+            width: 150px;
+            margin-left: 10px;
+            margin-top: 30px;
+        }
+    }
+}
+
+
+iframe {
+    width: 868px;
+height: 536px;
+}

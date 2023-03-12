@@ -1,0 +1,177 @@
+@import "../../assets/fonts/fonts.scss";
+@import "../../assets/colors/colors.scss";
+@import "../../assets/commons/mixins.scss";
+
+.help {
+    &__container {
+        max-width: 1440px;
+        width: 100%;
+        @include flex(center, center);
+        flex-direction: column;
+        padding-top: 100px;
+    }
+
+    &__text {
+        text-align: center;
+        max-width: 550px;
+        margin-bottom: 48px;
+    }
+
+    &__title {
+        @include font(500, 40px);
+        line-height: 120%;
+        color: $main--text--color;
+    }
+
+    &__description {
+        @include font(400, 16px);
+        line-height: 130%;
+        color: $form--text--color;
+        
+    }
+
+    &__boxes {
+        @include flex(start, space-evenly);
+    }
+
+    &__box {
+        width: 50%;
+
+        &-right {
+            @include flex(center, end);
+        }
+
+        &-left {
+            @include flex(start, start);
+            flex-direction: column;
+            margin-right: 100px;
+            p {
+                margin-bottom: 10px;
+                width: 498px;
+            }
+        }
+        &-img {
+            width: 599px;
+            height: 575px;
+        }
+        &-title {
+            @include font(600, 20px);
+            line-height: 120%;
+            color: $main--text--color;
+            margin-bottom: 24px;
+        }
+        &-currency {
+            div {
+                margin-top: 15px;
+                padding: 10px 25px;
+            }
+        }
+        &-amount {
+            margin: 20px 0;
+            div {
+                padding: 10px 50px;
+            }
+        }
+        &-input {
+            width: 496px;
+            height: 48px;
+            border: none;
+            border-bottom: 1px solid $placeholder--color;
+            margin-top: 24px;
+            border-radius: 4px 4px 0px 0px;
+            &:hover {
+                background-color: $hovered--input--color;
+                border-bottom: 1px solid $hovered--input--border;
+            }
+            &:focus-visible {
+                background-color: $hovered--input--color;
+                border-bottom: 2px solid $hovered--input--border;
+                outline: none;
+            }
+            &::placeholder {
+                @include font(400, 16px);
+                line-height: 130%;
+                color: $placeholder--color;
+                padding: 13.5px 16px;
+                &.error {
+                    color: $error--color;
+                }
+            }
+            &.error {
+                border-bottom: 2px solid $error--color;
+            }
+        }
+        &-buttons {
+            width: 550px;
+            a {
+                &:nth-child(1) {
+                    background-color: $hovered--input--border;
+                    color: $footer--title--color;
+                    &:hover {
+                        background-color: $hovered--paypal--button;
+                    }
+                }
+                &:nth-child(2) {
+                    background-color: $button--color--unpressed;
+                    color: $main--text--color;
+                    &:hover {
+                        background-color: $button--color--hover;
+                    }
+                }
+            }
+        }
+        &-button {
+            width: 90%;
+            height: 48px;
+            margin-top: 20px;
+            @include flex (center, center);
+            cursor: pointer;
+            text-decoration: none;
+            @include font(500, 16px);
+            line-height: 120%;
+            img {
+                margin-left: 10px;
+            }
+                
+        }
+
+    }
+    &__error {
+        &-text {
+            color: $error--color;
+            @include font(400, 12px);
+            margin-top: 4px;
+        }
+    }
+}
+
+.radio {
+    @include flex (center, space-evenly);
+    div {
+        @include flex (center, center);
+        border: 1px solid black;
+        @include font(400, 14px);
+        color: $main--text--color;
+        cursor: pointer;
+        &:hover {
+            background-color:  $active--control--color;
+        } 
+    }
+    div.active{
+        background-color:  $active--control--color;
+        img{
+            margin-right: 5px;
+        }
+    }
+    div.error{
+        border-color: $error--color;
+        color: $error--color;
+    }
+    :nth-child(1) {
+        border-radius: 30px 0 0  30px;
+    }
+    :nth-child(3) {
+        border-radius: 0  30px 30px 0;
+    }
+
+}

@@ -1,0 +1,40 @@
+@import "../../assets/fonts/fonts.scss";
+@import "../../assets/colors/colors.scss";
+@import "../../assets/commons/mixins.scss";
+
+.currentNeeds {
+  @include flex (start, center);
+  flex-direction: column;
+  max-width: 1440px;
+  margin: 50px auto 100px;
+  // height: 1100px;
+}
+
+.mainName {
+    margin-bottom: 25px;
+    @include font (500, 40px);
+    line-height: 120%;
+    color: $main--text--color;
+}
+
+.mostImportantNeeds {
+  margin-bottom: 50px;
+  width: 300px;
+  @include font (400, 16px);
+  line-height: 120%;
+  color: $main--text--color;
+}
+
+.currentNeedsCards {
+  display: grid;
+  grid-template-columns: 286px 286px 286px 286px;
+  grid-template-rows: 600px;
+  gap: 32px;
+  margin-top: 50px;
+  // margin-bottom: 40px;
+}
+
+.cardItemImage {
+  width: 100%;
+  height: 100%;
+}

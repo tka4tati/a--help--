@@ -1,0 +1,86 @@
+@import "../../assets/fonts/fonts.scss";
+@import "../../assets/colors/colors.scss";
+p {
+    margin: 0;
+}
+.box {
+    &__container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    }
+    &__title {
+    width: 382px;
+    height: 24px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    color: $main--text--color;
+    margin: 100px 0 72px 100px;
+    }
+    &__blocks {
+        display: flex;
+        margin-bottom: 100px;
+    }
+    &__block {
+        width: 33.3%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &-title {
+            width: 47px;
+            height: 24px;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 120%;
+            color: $main--text--color;
+            margin-bottom: 34px;
+        }
+        &-field {
+            display: flex;
+            height: 68px;
+            align-items: center;
+            border-bottom: solid 1px black;
+        }
+        &-property {
+            width: 99px;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 130%;
+            color: $main--text--color;
+            margin-right: 4px;
+        }
+        &-value {
+            display: flex;
+            align-items: center;
+            width: 227px;
+            height: 48px;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 130%;
+            color: $main--text--color;
+            margin-right: 18.6px;
+        }
+        &-button{
+            cursor: pointer;
+        }
+    }
+    &__header {
+        position: relative;
+    }
+    &__path-down {
+        position: absolute;
+        top: 9px;
+        right: 100px;
+        cursor: pointer;
+    }
+    
+}

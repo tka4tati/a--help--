@@ -1,0 +1,97 @@
+@import "../../assets/fonts/fonts.scss";
+@import "../../assets/colors/colors.scss";
+@import "../../assets/commons/mixins.scss";
+
+p {
+    margin: 0;
+}
+.footer {
+    &__container {
+      
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        background-color: $footer--color;
+    }
+    &__block {
+        width: 40%;
+        margin: 72px 0;
+        &:nth-child(1) {
+            margin-left: 200px;
+        }
+        &:nth-child(2) {
+            margin-left: 100px;
+        }
+        &-title {
+            @include font (500, 40px);
+            color: $footer--title--color;
+            line-height: 120%;
+            width: 425px;
+        }
+        &-link {
+            text-decoration: none;
+        }
+        &-left {
+            height: 96px;
+        }
+        &-right {
+            height: 48px;
+            width: 286px;
+        }
+        &-text {
+            @include font (400, 16px);
+            color: $footer--title--color;
+            width: 408px;
+            height: 84px;
+            line-height: 130%;
+            margin-bottom: 32px;
+            margin-top: 24px;
+        }
+        &-contacts {
+            width: 100%;
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+        &-contact {
+            h5 {
+                @include font(500, 14px);
+                color: $footer--title--color;
+                line-height: 130%;
+                height: 18px;
+            }
+            p {
+                @include font(400, 14px);
+                color: $footer--text--color;
+                line-height: 130%;
+                height: 18px;
+                a {
+                    text-decoration: none;
+                    @include font(400, 14px);
+                    color: $footer--text--color;
+                    line-height: 130%;
+                    height: 18px;
+                    &:hover {
+                        color: white;
+                    }
+                }
+            }
+        }
+        &-icons {
+            display: flex;
+            justify-content: space-between;
+            width: 127px;
+        }
+        &-icon {
+            width: 18px;
+            height: 18px;
+        }
+        
+    }
+}
+.button__wrappper {
+    max-width: 600px;
+}
+

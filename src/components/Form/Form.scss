@@ -1,0 +1,111 @@
+@import "../../assets/fonts/fonts.scss";
+@import "../../assets/colors/colors.scss";
+@import "../../assets/commons/mixins.scss";
+
+.form {
+    &__container {
+        max-width: 1440px;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 100px;
+        margin-bottom: 107px;
+    }
+    &__blocks {
+        display: flex;
+        
+    }
+    &__block {
+        width: 50%;
+        img {
+            width: 602px;
+            height: 317px;
+            margin-bottom: 36px;
+        }
+        h1 {
+            @include font(500, 40px);
+            color: $main--text--color;
+            line-height: 120%;
+            height: 96px;
+            margin-bottom: 36px;
+        }
+        &-text {
+            @include font(400, 16px);
+            color: $form--text--color;
+            line-height: 130%;
+            margin-bottom: 10px;
+        }
+        &-right {
+            @include flex(none, end)
+        }
+        &-condition {
+            @include font(400, 12px);
+            line-height: 130%;
+            color: $under--input--color;
+            margin-top: 4px;
+        }
+        form {
+            @include flex (space-around, space-around);
+            flex-direction: column;
+            width: 558px;
+        }
+        &-input {
+            width: 496px;
+            height: 48px;
+            border: none;
+            border-bottom: 1px solid $placeholder--color;
+            margin-top: 24px;
+            border-radius: 4px 4px 0px 0px;
+            &:hover {
+                background-color: $hovered--input--color;
+                border-bottom: 1px solid $hovered--input--border;
+            }
+            &:focus-visible {
+                background-color: $hovered--input--color;
+                border-bottom: 2px solid $hovered--input--border;
+                outline: none;
+            }
+            &::placeholder {
+                @include font(400, 16px);
+                line-height: 130%;
+                color: $placeholder--color;
+                padding: 13.5px 16px;
+            }
+            &.error{
+                border-bottom: 2px solid $error--color;
+                &::placeholder {
+                    color: $error--color;
+                }
+            }
+        }
+        &-error {
+            color: $error--color;
+            @include font(400, 12px);
+            line-height: 130%;
+            margin-top: 4px;
+        }
+        &-textarea {
+            height: 173px;
+        }
+        &-checkbox {
+            @include flex(center, none);
+            margin-top: 26px;
+        }
+        &-label {
+            @include font(500, 16px);
+            text-decoration: underline;
+            margin-left: 15px;
+            cursor: pointer;
+            &:hover {
+                @include font(700, 16px);
+            }
+            &.error {
+                color:$error--color;
+            }
+        
+        }
+        
+    }
+    &__button {
+        margin-top: 60px;
+    }
+}

@@ -1,0 +1,62 @@
+@import "../../../assets/fonts/fonts.scss";
+@import "../../../assets/colors/colors.scss";
+@import "../../../assets/commons/mixins.scss";
+
+.currentNeeds__item {
+  width: 286px;
+  height: 600px;
+  
+  &__image {
+    width: 286px;
+    height: 250px;
+    margin-bottom: 20px;
+    background-size: contain;
+  }
+
+  &__name {
+    @include font (700, 20px);
+    line-height: 120%;
+    color: $secondary--text--color;
+    height: 75px;
+    margin-bottom: 12px;
+  }
+
+  &__finance {
+    @include font (700, 24px);
+    line-height: 120%;
+    color: $main--text--color;
+    height: 30px;
+    margin-bottom: 12px;
+  }
+  
+  &__description {
+    overflow-y: hidden;
+    @include font (400, 16px);
+    line-height: 130%;
+    color: $main--text--color;
+    height: 125px;
+    margin-bottom: 20px;
+  }
+}
+
+.currentNeeds__item__image img {
+  width: 286px;
+  height: 254px;
+}
+
+.currentNeeds__item .button {
+  width: 100%;
+  height: 45px;
+  padding: 0;
+}
+
+.currentNeeds__item .button__text {
+  margin: 0;
+}
+
+.currentNeeds__item__link--button, .container {
+  display: flex;
+  justify-content: end;
+  min-width: 315px;
+  padding-right: 0px
+}

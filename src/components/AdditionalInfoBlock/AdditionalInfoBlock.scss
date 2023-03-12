@@ -1,0 +1,44 @@
+@import "../../assets/fonts/fonts.scss";
+@import "../../assets/colors/colors.scss";
+@import "../../assets/commons/mixins.scss";
+
+.additional {
+    &__container {
+        
+        width: 100%;
+        max-width: 1440px;
+        @include flex(start, space-evenly);
+        margin: 0 0 235px;
+    }
+    &__text {
+        width: 50%;
+        max-width:  586px;
+        &-title {
+            @include font(500, 40px);
+            line-height: 120%;
+            color: $main--text--color;
+            margin-bottom: 24px;
+        }
+        &-description {
+            @include font(400, 16px);
+            line-height: 130%;
+            color: $main--text--color;
+        }
+    }
+    &__form {
+        .form__block {
+            form {
+                .form__block-input {
+                    width: 550px;
+                }
+                textarea{
+                    width: 550px;
+                }
+                
+            }
+        }
+        &-button {
+            width: 600px;
+        }
+    }
+}
