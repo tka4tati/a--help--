@@ -20,7 +20,7 @@ export const NavigationBar = () => {
         <Navbar.Collapse id="navbar-dark-example">
           <Nav>
             <NavDropdown  title="Про нас" menuVariant="light">
-              <NavItem path='/mission' text={"Мета та історія фонду"}/>
+              <NavItem path='https://help-a-help.netlify.app/mission' text={"Мета та історія фонду"}/>
               <NavItem path='/team' text={"Команда та партнери"} />
               <NavItem path='/docs' text={"Документація та звітність"} />
             </NavDropdown>
