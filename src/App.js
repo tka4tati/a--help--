@@ -23,7 +23,7 @@ function App() {
           <Routes>
             <Route path='/' element={<MainPage />} />
             <Route>
-                <Route path='/mission' element={<MissionStoryPage />} />
+                <Route path='https://help-a-help.netlify.app/mission' element={<MissionStoryPage />} />
                 <Route path='/team' element={<TeamPartnersPage />} />
                 <Route path='/docs' element={<DocsReportsPage />} />
                 <Route path='/current' element={<CurrentProjectsPage />} />
